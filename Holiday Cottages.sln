@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Holiday Cottages", "Holiday Cottages\Holiday Cottages.csproj", "{19B324FA-E616-406B-A792-454F018D36A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{DC39CA6A-64F2-4721-98A0-232DCA60F5D8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{19B324FA-E616-406B-A792-454F018D36A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19B324FA-E616-406B-A792-454F018D36A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19B324FA-E616-406B-A792-454F018D36A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19B324FA-E616-406B-A792-454F018D36A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC39CA6A-64F2-4721-98A0-232DCA60F5D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC39CA6A-64F2-4721-98A0-232DCA60F5D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC39CA6A-64F2-4721-98A0-232DCA60F5D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC39CA6A-64F2-4721-98A0-232DCA60F5D8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B4A7645D-9BDC-4C70-B5CC-0D8A06A2C58B}
+	EndGlobalSection
+EndGlobal
