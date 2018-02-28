@@ -1,0 +1,37 @@
+{
+  "name": "Holiday Cottages",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "build": "browserify --debug ./src/js/app.js -o ./dist/js/bundle.js"
+  },
+  "dependencies": {
+    "bourbon": "^4.3.0",
+    "bourbon-neat": "^1.8.0",
+    "gulp-browser": "^3.0.4",
+    "gulp-sass": "^3.1.0",
+    "gulp-util": "^3.0.8",
+    "node-sass": "^4.5.2",
+    "plumber": "^0.4.8",
+    "rework": "^1.0.1",
+    "rework-media-filter": "^0.1.4",
+    "rework-split-media": "0.0.1"
+  },
+  "author": "Andrew Dobb",
+  "license": "UNLICENSED",
+  "private": true,
+  "devDependencies": {
+    "browserify": "^14.3.0",
+    "critical": "^0.8.4",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-rework": "^1.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^2.1.2",
+    "gutil": "^1.6.4",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
