@@ -186,11 +186,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Code\\Holiday Cottages\\Core\\Core.csproj",
+      "projectUniqueName": "C:\\Code\\Roundhead Software\\Holiday Cottages\\Core\\Core.csproj",
       "projectName": "Core",
-      "projectPath": "C:\\Code\\Holiday Cottages\\Core\\Core.csproj",
+      "projectPath": "C:\\Code\\Roundhead Software\\Holiday Cottages\\Core\\Core.csproj",
       "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-      "outputPath": "C:\\Code\\Holiday Cottages\\Core\\obj\\",
+      "outputPath": "C:\\Code\\Roundhead Software\\Holiday Cottages\\Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

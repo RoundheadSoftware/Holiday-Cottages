@@ -7,3 +7,16 @@ C:\Code\Holiday Cottages\Core\obj\Debug\netstandard2.0\Core.AssemblyInfoInputs.c
 C:\Code\Holiday Cottages\Core\obj\Debug\netstandard2.0\Core.AssemblyInfo.cs
 C:\Code\Holiday Cottages\Core\obj\Debug\netstandard2.0\Core.dll
 C:\Code\Holiday Cottages\Core\obj\Debug\netstandard2.0\Core.pdb
+C:\Code\Roundhead Software\Holiday Cottages\Core\bin\Debug\netstandard2.0\Core.deps.json
+C:\Code\Roundhead Software\Holiday Cottages\Core\bin\Debug\netstandard2.0\Core.dll
+C:\Code\Roundhead Software\Holiday Cottages\Core\bin\Debug\netstandard2.0\Core.pdb
+C:\Code\Roundhead Software\Holiday Cottages\Core\bin\Debug\netstandard2.0\System.Configuration.dll
+C:\Code\Roundhead Software\Holiday Cottages\Core\bin\Debug\netstandard2.0\System.Security.dll
+C:\Code\Roundhead Software\Holiday Cottages\Core\bin\Debug\netstandard2.0\System.Configuration.xml
+C:\Code\Roundhead Software\Holiday Cottages\Core\bin\Debug\netstandard2.0\System.Security.xml
+C:\Code\Roundhead Software\Holiday Cottages\Core\obj\Debug\netstandard2.0\Core.csprojResolveAssemblyReference.cache
+C:\Code\Roundhead Software\Holiday Cottages\Core\obj\Debug\netstandard2.0\Core.csproj.CoreCompileInputs.cache
+C:\Code\Roundhead Software\Holiday Cottages\Core\obj\Debug\netstandard2.0\Core.AssemblyInfoInputs.cache
+C:\Code\Roundhead Software\Holiday Cottages\Core\obj\Debug\netstandard2.0\Core.AssemblyInfo.cs
+C:\Code\Roundhead Software\Holiday Cottages\Core\obj\Debug\netstandard2.0\Core.dll
+C:\Code\Roundhead Software\Holiday Cottages\Core\obj\Debug\netstandard2.0\Core.pdb
