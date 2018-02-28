@@ -328,3 +328,11 @@ __pycache__/
 
 
 # End of https://www.gitignore.io/api/umbraco,visualstudio,visualstudiocode
+bin/**
+obj/**
+node_modules/**
+App_Data/**
+**/bin/**
+**/obj/**
+**/node_modules/**
+**/App_Data/**
