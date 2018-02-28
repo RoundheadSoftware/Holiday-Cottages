@@ -4,14 +4,22 @@ namespace Core
 {
     public class Constants
     {
-        public static string Constant = "Here's a string";
-        public static string DateFormat = "";
-        public static int CachingInMinutes
+        public class GeneralConstants
         {
-            get
+            public static string Constant = "Here's a string";
+            public static string ShortDateFormat = "dd/MM/yy";
+            public static string LongDateFormat = "dddd, dd MMMM yyyy";
+            public static int CachingInMinutes
             {
-                return Helpers.DataHelper.TryConvertInt(ConfigurationManager.AppSettings["CachingInMinutes"]);
+                get
+                {
+                    return Helpers.DataHelper.TryConvertInt(ConfigurationManager.AppSettings["CachingInMinutes"]);
+                }
             }
+        }
+        public class DocumentTypes
+        {
+
         }
     }
 }
