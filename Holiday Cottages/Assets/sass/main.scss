@@ -1,1 +1,10 @@
-﻿
+﻿$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
+$grid-width: 960px;
+$grid-columns:12;
+
+@import 'general';
+@import 'areas';
+@import 'nav';
+@import 'homepage';
+@import 'footer';
