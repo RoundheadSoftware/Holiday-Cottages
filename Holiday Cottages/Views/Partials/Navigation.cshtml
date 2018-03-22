@@ -5,15 +5,24 @@
 <div id="primary-menu" class="menu">
     <nav>
         <ul aria-expanded="false" class="nav-menu">
-            <li class="active">
-                <a href="@root.Url">@root.Name</a>
-            </li>
+            @if (Model.Content == root)
+    {
+        <li>
+            <a href="@root.Url" class="active">@root.Name</a>
+        </li>
+}
+else
+{
+        <li>
+            <a href="@root.Url">@root.Name</a>
+        </li>
+}
             @foreach (var page in root.Children.Where(x => x.IsVisible()))
     {
         if (page.IsAncestorOrSelf(Model.Content))
         {
-            <li class="active">
-                <a href="@page.Url">@page.Name</a>
+            <li>
+                <a href="@page.Url" class="active">@page.Name</a>
             </li>
 }
 else
