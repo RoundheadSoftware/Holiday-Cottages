@@ -1,2 +1,42 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
-<p>Hero Partial</p>
+@{
+    string heroUrl = "https://balmaqueencom.files.wordpress.com/2017/06/cropped-och-cover-photo-2.jpg";
+    IPublishedContent heroImage = Model.Content.GetPropertyValue<IPublishedContent>(Core.Constants.DocumentTypes.Hero.HeroImage);
+    bool showTitle = Model.Content.GetPropertyValue<bool>(Core.Constants.DocumentTypes.Hero.ShowTitle);
+    bool showDescription = Model.Content.GetPropertyValue<bool>(Core.Constants.DocumentTypes.Hero.ShowDescription);
+    if (heroImage != null)
+    {
+        heroUrl = heroImage.Url;
+    }
+}
+<div class="hero-bgimage">
+    <h1 class="hero-title">
+        <a href="/" rel="home" alt="@Model.Content.GetPropertyValue(Core.Constants.DocumentTypes.Hero.Title)">
+            @Model.Content.GetPropertyValue(Core.Constants.DocumentTypes.Hero.Title)
+        </a>
+    </h1>
+    <h2 class="hero-description">
+        @Model.Content.GetPropertyValue(Core.Constants.DocumentTypes.Hero.Subtitle)
+    </h2>
+</div>
+<style>
+    .hero-bgimage {
+        background-image: url(@heroUrl);
+    }
+    @if (!showTitle)
+    {
+        <text>
+        .hero-title {
+            display: none;
+        }
+        </text>
+    }
+    @if (!showDescription)
+    {
+        <text>
+        .hero-description {
+            display: none;
+        }
+        </text>
+    }
+</style>

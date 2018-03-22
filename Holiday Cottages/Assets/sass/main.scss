@@ -1,10 +1,13 @@
 ﻿$font-stack: Helvetica, sans-serif;
-$primary-color: #333;
+$primary-color: #a3a3a3;
+$secondary-color: #9bbe4b;
+$background-color: #333333;
 $grid-width: 960px;
 $grid-columns:12;
 
 @import 'general';
 @import 'areas';
+@import 'hero';
 @import 'nav';
 @import 'homepage';
 @import 'footer';

@@ -19,6 +19,15 @@ namespace Core
         }
         public class DocumentTypes
         {
+            public class Hero
+            {
+                public static string Title = "pageTitle";
+                public static string Subtitle = "pageSubtitle";
+                public static string HeroImage = "heroImage";
+                public static string ShowTitle = "showTitle";
+                public static string ShowDescription = "showDescription";
+
+            }
 
         }
     }
