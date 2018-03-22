@@ -1,1 +1,1 @@
-console.log("start");
+function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:"en",layout:google.translate.TranslateElement.FloatPosition.TOP_LEFT},"google_translate_element")}!function(e,t,n){var a,o=e.getElementsByTagName(t)[0];e.getElementById(n)||((a=e.createElement(t)).id=n,a.src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.12&appId=228050253912608&autoLogAppEvents=1",o.parentNode.insertBefore(a,o))}(document,"script","facebook-jssdk");

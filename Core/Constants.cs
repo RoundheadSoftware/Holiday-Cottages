@@ -28,6 +28,22 @@ namespace Core
                 public static string ShowDescription = "showDescription";
 
             }
+            public class Content
+            {
+                public static string Title = "title";
+                public static string BodyContent = "bodyContent";
+            }
+            public class Sidebar
+            {
+                public static string Title = "sidebarTitle";
+                public static string Text = "sidebarText";
+                public static string ShowFacebookPage = "showFacebookPage";
+                public static string FacebookIntroduction = "facebookIntroduction";
+                public static string FacebookPageURL = "facebookPageURL";
+                public static string FacebookPageName = "facebookPageName";
+                public static string ShowGoogleTranslate = "showGoogleTranslate";
+                public static string GoogleTranslateIntroduction = "googleTranslateIntroduction";
+            }
 
         }
     }

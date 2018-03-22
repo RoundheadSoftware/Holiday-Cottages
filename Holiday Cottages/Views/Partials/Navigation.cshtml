@@ -1,2 +1,16 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
-<p>Navigation Partial</p>
+@{
+    var root = Model.Content.AncestorOrSelf(1);
+}
+<div id="primary-menu" class="menu">
+    <nav>
+        <ul aria-expanded="false" class="nav-menu">
+            @foreach (var page in root.Children.Where("Visible"))
+            {
+                <li>
+                    <a href="@page.Url">@page.Name</a>
+                </li>
+            }
+        </ul>
+    </nav>
+</div>

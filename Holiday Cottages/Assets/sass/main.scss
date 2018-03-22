@@ -1,13 +1,17 @@
 ﻿$font-stack: Helvetica, sans-serif;
 $primary-color: #a3a3a3;
 $secondary-color: #9bbe4b;
+$green-headers: #9bbe4b;
 $background-color: #333333;
+$header-color: #e7e7e3;
 $grid-width: 960px;
 $grid-columns:12;
 
+@import 'grid';
 @import 'general';
 @import 'areas';
 @import 'hero';
 @import 'nav';
-@import 'homepage';
+@import 'mainContent';
+@import 'sidebar';
 @import 'footer';

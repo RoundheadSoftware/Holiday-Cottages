@@ -2,8 +2,6 @@
 @{
     string heroUrl = "https://balmaqueencom.files.wordpress.com/2017/06/cropped-och-cover-photo-2.jpg";
     IPublishedContent heroImage = Model.Content.GetPropertyValue<IPublishedContent>(Core.Constants.DocumentTypes.Hero.HeroImage);
-    bool showTitle = Model.Content.GetPropertyValue<bool>(Core.Constants.DocumentTypes.Hero.ShowTitle);
-    bool showDescription = Model.Content.GetPropertyValue<bool>(Core.Constants.DocumentTypes.Hero.ShowDescription);
     if (heroImage != null)
     {
         heroUrl = heroImage.Url;
@@ -23,7 +21,7 @@
     .hero-bgimage {
         background-image: url(@heroUrl);
     }
-    @if (!showTitle)
+    @if (!Model.Content.GetPropertyValue<bool>(Core.Constants.DocumentTypes.Hero.ShowTitle))
     {
         <text>
         .hero-title {
@@ -31,7 +29,7 @@
         }
         </text>
     }
-    @if (!showDescription)
+    @if (!Model.Content.GetPropertyValue<bool>(Core.Constants.DocumentTypes.Hero.ShowDescription))
     {
         <text>
         .hero-description {

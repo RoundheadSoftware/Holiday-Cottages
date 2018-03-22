@@ -1,0 +1,43 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+<aside id="free-to-book" class="free-to-book-widget">
+    <div class="textwidget">
+        <div>
+            <p style="background-color:#9bbe4b;padding-left:10px;"><strong><a style="font-size:1.2em;color:#000000;" href="https://www.freetobook.com/affiliates/reservation.php?w_id=29949&amp;w_tkn=XMSgzS1oNWAYJLZQQapZrw2Axiw2MvsYhHVb3hpxOJgwGAM6U4097HPMTNWWz" target="_blank" rel="noopener">Check Availability and Book Here</a></strong></p>
+            <div>
+                <p style="background-color:#A3A3A3;padding-left:10px;">
+                    <span style="color:#000;font-weight:bold;">Note: Saturday arrival / departure</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</aside>
+<aside id="text" class="text-widget">
+    <h3>@Model.Content.GetPropertyValue(Core.Constants.DocumentTypes.Sidebar.Title)</h3>
+    <div class="textwidget">
+        @Model.Content.GetPropertyValue(Core.Constants.DocumentTypes.Sidebar.Text)
+    </div>
+</aside>
+@if (@Model.Content.GetPropertyValue<bool>(Core.Constants.DocumentTypes.Sidebar.ShowFacebookPage))
+{
+<aside id="facebook" class="facebook-widget">
+    <h4>@Model.Content.GetPropertyValue(Core.Constants.DocumentTypes.Sidebar.FacebookIntroduction)</h4>
+    <div class="fb-page" data-href="@Model.Content.GetPropertyValue(Core.Constants.DocumentTypes.Sidebar.FacebookPageURL)"
+         data-tabs="timeline" data-small-header="false"
+         data-adapt-container-width="true" data-hide-cover="false"
+         data-show-facepile="true">
+        <blockquote cite="@Model.Content.GetPropertyValue(Core.Constants.DocumentTypes.Sidebar.FacebookPageURL)"
+                    class="fb-xfbml-parse-ignore">
+            <a href="@Model.Content.GetPropertyValue(Core.Constants.DocumentTypes.Sidebar.FacebookPageURL)">
+                @Model.Content.GetPropertyValue(Core.Constants.DocumentTypes.Sidebar.FacebookPageName)
+            </a>
+        </blockquote>
+    </div>
+</aside>
+}
+@if (@Model.Content.GetPropertyValue<bool>(Core.Constants.DocumentTypes.Sidebar.ShowGoogleTranslate))
+{
+    <aside id="translate" class="google-translate-widget">
+        <h4>@Model.Content.GetPropertyValue(Core.Constants.DocumentTypes.Sidebar.GoogleTranslateIntroduction)</h4>
+        <div id="google_translate_element"></div>
+    </aside>
+}
