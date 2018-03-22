@@ -1,27 +1,48 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
-    string heroUrl = "https://balmaqueencom.files.wordpress.com/2017/06/cropped-och-cover-photo-2.jpg";
+    IPublishedContent root = Model.Content.AncestorOrSelf(1);
+    string title = Model.Content.GetPropertyValue<string>(Core.Constants.DocumentTypes.Hero.Title);
+    string subtitle = Model.Content.GetPropertyValue<string>(Core.Constants.DocumentTypes.Hero.Subtitle);
+    bool showTitle = Model.Content.GetPropertyValue<bool>(Core.Constants.DocumentTypes.Hero.ShowTitle);
+    bool showSubtitle = Model.Content.GetPropertyValue<bool>(Core.Constants.DocumentTypes.Hero.ShowDescription);
+    string heroUrl = string.Empty;
     IPublishedContent heroImage = Model.Content.GetPropertyValue<IPublishedContent>(Core.Constants.DocumentTypes.Hero.HeroImage);
-    if (heroImage != null)
+    if (heroImage != null && !string.IsNullOrEmpty(heroImage.Url))
     {
         heroUrl = heroImage.Url;
+    }
+    else
+    {
+        heroImage = root.GetPropertyValue<IPublishedContent>(Core.Constants.DocumentTypes.Hero.HeroImage);
+        if (heroImage != null)
+        {
+            heroUrl = heroImage.Url;
+        }
+    }
+    if (string.IsNullOrEmpty(title))
+    {
+        title = root.GetPropertyValue<string>(Core.Constants.DocumentTypes.Hero.Title);
+    }
+    if (string.IsNullOrEmpty(subtitle))
+    {
+        subtitle = root.GetPropertyValue<string>(Core.Constants.DocumentTypes.Hero.Subtitle);
     }
 }
 <div class="hero-bgimage">
     <h1 class="hero-title">
-        <a href="/" rel="home" alt="@Model.Content.GetPropertyValue(Core.Constants.DocumentTypes.Hero.Title)">
-            @Model.Content.GetPropertyValue(Core.Constants.DocumentTypes.Hero.Title)
+        <a href="/" rel="home" alt="@title">
+            @title
         </a>
     </h1>
     <h2 class="hero-description">
-        @Model.Content.GetPropertyValue(Core.Constants.DocumentTypes.Hero.Subtitle)
+        @subtitle
     </h2>
 </div>
 <style>
     .hero-bgimage {
         background-image: url(@heroUrl);
     }
-    @if (!Model.Content.GetPropertyValue<bool>(Core.Constants.DocumentTypes.Hero.ShowTitle))
+    @if (!showTitle)
     {
         <text>
         .hero-title {
@@ -29,7 +50,7 @@
         }
         </text>
     }
-    @if (!Model.Content.GetPropertyValue<bool>(Core.Constants.DocumentTypes.Hero.ShowDescription))
+    @if (!showSubtitle)
     {
         <text>
         .hero-description {

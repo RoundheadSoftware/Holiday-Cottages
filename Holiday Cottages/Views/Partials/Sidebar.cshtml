@@ -1,4 +1,17 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+    @{ 
+        IPublishedContent root = Model.Content.AncestorOrSelf(1);
+        string textWidgetTitle = Model.Content.GetPropertyValue<string>(Core.Constants.DocumentTypes.Sidebar.Title);
+        if (string.IsNullOrEmpty(textWidgetTitle))
+        {
+            textWidgetTitle = root.GetPropertyValue<string>(Core.Constants.DocumentTypes.Sidebar.Title);
+        }
+        string textWidgetBody = Model.Content.GetPropertyValue<string>(Core.Constants.DocumentTypes.Sidebar.Text);
+        if (string.IsNullOrEmpty(textWidgetBody))
+        {
+            textWidgetBody = root.GetPropertyValue<string>(Core.Constants.DocumentTypes.Sidebar.Text);
+        }
+    }
 <aside id="free-to-book" class="free-to-book-widget">
     <div class="textwidget">
         <div>
@@ -11,33 +24,36 @@
         </div>
     </div>
 </aside>
+@if (!string.IsNullOrEmpty(textWidgetTitle) || !string.IsNullOrEmpty(textWidgetBody))
+{
 <aside id="text" class="text-widget">
-    <h3>@Model.Content.GetPropertyValue(Core.Constants.DocumentTypes.Sidebar.Title)</h3>
+    <h3>@textWidgetTitle</h3>
     <div class="textwidget">
-        @Model.Content.GetPropertyValue(Core.Constants.DocumentTypes.Sidebar.Text)
+        @Html.Raw(textWidgetBody)
     </div>
 </aside>
-@if (@Model.Content.GetPropertyValue<bool>(Core.Constants.DocumentTypes.Sidebar.ShowFacebookPage))
+}
+@if (@root.GetPropertyValue<bool>(Core.Constants.DocumentTypes.Sidebar.ShowFacebookPage))
 {
 <aside id="facebook" class="facebook-widget">
-    <h4>@Model.Content.GetPropertyValue(Core.Constants.DocumentTypes.Sidebar.FacebookIntroduction)</h4>
-    <div class="fb-page" data-href="@Model.Content.GetPropertyValue(Core.Constants.DocumentTypes.Sidebar.FacebookPageURL)"
+    <h4>@root.GetPropertyValue(Core.Constants.DocumentTypes.Sidebar.FacebookIntroduction)</h4>
+    <div class="fb-page" data-href="@root.GetPropertyValue(Core.Constants.DocumentTypes.Sidebar.FacebookPageURL)"
          data-tabs="timeline" data-small-header="false"
          data-adapt-container-width="true" data-hide-cover="false"
          data-show-facepile="true">
-        <blockquote cite="@Model.Content.GetPropertyValue(Core.Constants.DocumentTypes.Sidebar.FacebookPageURL)"
+        <blockquote cite="@root.GetPropertyValue(Core.Constants.DocumentTypes.Sidebar.FacebookPageURL)"
                     class="fb-xfbml-parse-ignore">
-            <a href="@Model.Content.GetPropertyValue(Core.Constants.DocumentTypes.Sidebar.FacebookPageURL)">
-                @Model.Content.GetPropertyValue(Core.Constants.DocumentTypes.Sidebar.FacebookPageName)
+            <a href="@root.GetPropertyValue(Core.Constants.DocumentTypes.Sidebar.FacebookPageURL)">
+                @root.GetPropertyValue(Core.Constants.DocumentTypes.Sidebar.FacebookPageName)
             </a>
         </blockquote>
     </div>
 </aside>
 }
-@if (@Model.Content.GetPropertyValue<bool>(Core.Constants.DocumentTypes.Sidebar.ShowGoogleTranslate))
+@if (@root.GetPropertyValue<bool>(Core.Constants.DocumentTypes.Sidebar.ShowGoogleTranslate))
 {
     <aside id="translate" class="google-translate-widget">
-        <h4>@Model.Content.GetPropertyValue(Core.Constants.DocumentTypes.Sidebar.GoogleTranslateIntroduction)</h4>
+        <h4>@root.GetPropertyValue(Core.Constants.DocumentTypes.Sidebar.GoogleTranslateIntroduction)</h4>
         <div id="google_translate_element"></div>
     </aside>
 }
